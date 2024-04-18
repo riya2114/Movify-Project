@@ -7,20 +7,17 @@
     justify-content: space-between;
     padding: 0.5em;
     box-shadow: var(--navbar-box-shadow);
-    height: 1.8em;
+    height: 3em;
     background-color: var(--navbar-background-color);
 }
 .navbarLogo{
     cursor: pointer;
     font-weight: bold;
-    font-size: 0.5em;
+    font-size: 1.5em;
     color: var(--navbar-logo-color);
 }
-.search{
-    font-size: 0.8em;
-}
 .navbarTitle{
-    font-size: 0.7em;
+    font-size: 1.5em;
     font-family: sans-serif;
     background: var(--navbar-title-background);
     background: var(--navbar-title-gradient);
@@ -31,13 +28,21 @@
     display: flex;
     gap: 0.2em;
     border-bottom: 1px solid var(--navbar-input-color);
-    width: 10em;
+    width: 14em;
     font-size: 0.8em;
 }
 .icons{
     cursor: pointer;
+    margin-top: 0.3em;
+    margin-right: 0.6em;
 }
-
+input::placeholder{
+    font-size: 1em;;
+}
+.search{
+    margin-top: 0.5em;
+    font-size: 1.2em;
+}
 @media(max-width: 1050px){
     .navbarParent{
         font-size: 30px;
@@ -47,31 +52,96 @@
 
     }
 }
+@media(max-width: 950px){
+    .navbarParent{
+        height: 55px;
+    }
+    .navbarLogo{
+        font-size: 20px;
+    }
+    .navbarTitle{
+        font-size: 20px;
+    }
+    .navbarSearch{
+        width: 200px;
+    }
+    input::placeholder{
+        font-size: 20px;
+    }
+    .search{
+        font-size: 20px;
+        margin-top: 2px;
+    }
+}
 @media(max-width: 550px){
     .navbarParent{
-        font-size: 20px;
+        font-size: 10px;
+        height: 40px;
     }
     input, input::placeholder{
         font-size: 10px;
-
+    }
+    .navbarSearch{
+        width: 100px;
+    }
+    .search{
+        font-size: 15px;
+        margin-top: 8px;
+    }
+    .icons{
+        padding-bottom: 10px;
     }
 }
 @media(max-width: 450px) {
     .navbarParent{
-        font-size: 12px;
-        height: 2.8em;
+        font-size: 10px;
+        height: 35px;
     }
     input, input::placeholder{
+        font-size: 8px;
+    }
+    .navbarLogo{
         font-size: 10px;
-
+        margin-top: 5px;
+    }
+    .navbarTitle{
+        font-size: 15px;
+        margin-top: 5px;
+    }
+    .search{
+        font-size: 10px;
     }
 }
 @media(max-width: 320px){
     .navbarParent{
-        font-size: 10px;
+        height: 35px;
     }
     input, input::placeholder{
-        font-size: 10px;
-
+        font-size: 8px;
+    }
+    .navbarLogo{
+        font-size: 9px;
+    }
+    .navbarTitle{
+        font-size: 9px;
+    }
+}
+@media(max-width: 270px){
+    .navbarParent{
+        height: 35px;
+    }
+    .navbarSearch{
+        width: 80px;
+    }
+    .navbarLogo{
+        margin-top: 5px;
+        font-size: 8px;
+    }
+    .navbarTitle{
+        margin-top: 5px;
+        font-size: 8px;
+    }
+    .search{
+        margin-top: 7px;
     }
 }
